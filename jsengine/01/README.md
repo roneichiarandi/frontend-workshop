@@ -1,4 +1,4 @@
-# Fetch e Apresentação de Dados
+# Estrutura de Projeto
 
 Esse exercício tem como objetivo buscar dados de uma fonte externa e apresentar esses dados na tela.
 
