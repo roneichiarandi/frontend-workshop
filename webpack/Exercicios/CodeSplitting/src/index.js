@@ -1,10 +1,12 @@
-function component() {
-  const element = document.createElement("div");
+async function getComponent() {
+  const element = document.createElement('div');
+  const { default: _ } = await import(/* webpackChunkName: "lodash" */ 'lodash');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
   return element;
 }
 
-document.body.appendChild(component());
+getComponent().then(component => {
+  document.body.appendChild(component);
+})

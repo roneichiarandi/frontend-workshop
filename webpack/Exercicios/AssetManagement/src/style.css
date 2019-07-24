@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Aaargh';
+    src: url('./Aaargh.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    background: url('./icon.png');
+    font-family: 'Aaargh';
+}
