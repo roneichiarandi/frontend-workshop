@@ -42,8 +42,8 @@ export const getFilteredCharacters = searchTerm => {
   })
 }
 
-export const getPageCharacters = searchTerm => {
-  return Axios.get(`${baseUrl}?name=${searchTerm}`).then(response => {
+export const getPageCharacters = page => {
+  return Axios.get(`${baseUrl}?page=${page}`).then(response => {
     return {
       characters: response.data.results.map(character => ({
         id: character.id,

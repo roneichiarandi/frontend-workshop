@@ -1,13 +1,12 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { fetchCharacters, getPageCharacters } from '../Store/actions'
+import { fetchCharacters, fetchPageCharacters } from '../Store/actions'
 import CharactersComponent from '../Components/CharactersList'
 
 const mapStateToProps = state => {
-    const { characters, loading } = state.characters;
-    const { info } = state.info;
+    const { list, info, loading } = state.characters;
     return {
-        characters,
+        list,
         info,
         loading
     }
@@ -17,7 +16,7 @@ const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
             fetchCharacters,
-            getPageCharacters
+            fetchPageCharacters
         },
         dispatch
     );

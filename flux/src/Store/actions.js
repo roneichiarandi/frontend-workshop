@@ -1,4 +1,4 @@
-import { getCharacters, getFilteredCharacters } from "../service";
+import { getCharacters, getFilteredCharacters, getPageCharacters } from "../service";
 
 export const characterActionTypes = {
   FETCH_CHARACTER_START: "FETCH_CHARACTER_START",
@@ -46,7 +46,7 @@ export const filterCharacters = payload => {
   };
 };
 
-export const getPageCharacters = payload => {
+export const fetchPageCharacters = payload => {
   return dispatch => {
     dispatch(createFetchCharactersStartAction());
     return getPageCharacters(payload)
